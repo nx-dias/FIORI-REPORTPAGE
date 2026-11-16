@@ -1,0 +1,17 @@
+managed implementation in class zbp_gdscds_i_tools unique;
+strict;
+
+define behavior for ZGDSCDS_I_TOOLS alias Tools
+persistent table zgdst_tools
+lock master
+authorization master ( instance )
+etag master lastchangedat
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly, numbering : managed ) Toolsid;
+
+  mapping for zgdst_tools corresponding;
+}
