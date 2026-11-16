@@ -1,0 +1,33 @@
+managed implementation in class zbp_gdscds_i_user unique;
+strict ( 2 );
+
+define behavior for ZGDSCDS_I_USER alias _users
+persistent table zgdst_user
+lock master
+authorization master ( instance )
+etag master lastchangedat
+{
+//  create;
+  update;
+//  delete;
+
+  action (features : instance) setInactive result[1] $self;
+
+  association _user_tools { create; }
+
+  mapping for zgdst_user corresponding;
+}
+
+define behavior for ZGDSCDS_I_USER_TOOL alias _user_tools
+persistent table zgdst_usertoolv3
+lock dependent by _user
+authorization dependent by _user
+etag master lastchangedat
+{
+  update;
+  delete;
+  field ( readonly ) Userid;
+  association _user;
+
+  mapping for zgdst_usertoolv3 corresponding;
+}
