@@ -1,0 +1,20 @@
+@EndUserText.label : 'Usuário e Ferramenta v3'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zgdst_usertoolv3 {
+
+  key client    : abap.clnt not null;
+  @AbapCatalog.foreignKey.screenCheck : false
+  key userid    : xubname not null
+    with foreign key [0..*,1] zgdst_user
+      where userid = zgdst_usertoolv3.userid;
+  key toolsid   : sysuuid_x16 not null;
+  toolname      : sstring;
+  knowledge     : ze_conhecimento6_gds;
+  interest      : ze_interesse6_gds;
+  training      : boolean;
+  lastchangedat : timestampl;
+
+}
