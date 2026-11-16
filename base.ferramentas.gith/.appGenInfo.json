@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Tue Nov 10 2026 14:38:45 GMT-0300 (Brasilia Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://seu-host:porta/sap/opu/odata/sap/ZGDSSB_C_TOOLS",
+    "appName": "zui5.base.ferramentas",
+    "appTitle": "Base Ferramentas",
+    "appDescription": "ManutençãoBase Ferramentas",
+    "appNamespace": "com.moovi",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.114.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.34.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "BaseFerramenta"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

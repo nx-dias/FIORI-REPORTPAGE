@@ -1,0 +1,32 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Nov 11 2026 16:28:42 GMT-0300 (Brasilia Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://seu-host:porta/sap/opu/odata/sap/ZGDSSB_C_USERS",
+    "appName": "zui5.usuario.base.conhecimento",
+    "appTitle": "Base Conhecimento",
+    "appDescription": "Base Conhecimento Usuário",
+    "appNamespace": "com.moovi",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.114.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.34.0",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "BaseConhecimentoUser"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "to_user_tools"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://seu-host:porta/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGDSCDS_RPRT_BASE_CONH2_CDS" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZGDSCDS_RPRT_BASE_CONH2Type" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Userid"/>
+                </Key>
+                <Property Name="Userid" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Usuário" sap:quickinfo="Nome do usuário no mestre de usuários"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="241" sap:label="Endereço de e-mail"/>
+                <Property Name="Fullname" Type="Edm.String" MaxLength="80" sap:label="Nome completo" sap:quickinfo="Nome completo da pessoa"/>
+                <Property Name="Toolname" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Cadeia pesquisa" sap:quickinfo="RSRSCAN1: cadeia de pesquisa/modelo de pesquisa"/>
+                <Property Name="Knowledge" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Interest" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label=""/>
+                <Property Name="Training" Type="Edm.Boolean" sap:label="variável booleana (X=verdade, -=falso, espaço=desconhecido)" sap:heading=""/>
+                <NavigationProperty Name="to_user_tools" Relationship="ZGDSCDS_RPRT_BASE_CONH2_CDS.assoc_2C1FA01D18BC12C017319A7AF48CB8CD" FromRole="FromRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD" ToRole="ToRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD"/>
+            </EntityType>
+            <EntityType Name="ZGDST_USER_TOOLSType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="USERID"/>
+                    <PropertyRef Name="TOOLSID"/>
+                </Key>
+                <Property Name="USERID" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Usuário"/>
+                <Property Name="TOOLSID" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="TOOLNAME" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Cadeia pesquisa"/>
+                <Property Name="KNOWLEDGE" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"/>
+                <Property Name="INTEREST" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"/>
+                <Property Name="TRAINING" Type="Edm.Boolean" sap:label="variável booleana (X=verdade, -=falso, espaço=desconhecido)"/>
+                <Property Name="LASTCHANGEDAT" Type="Edm.DateTimeOffset" Precision="7" sap:label="Registro da hora"/>
+            </EntityType>
+            <Association Name="assoc_2C1FA01D18BC12C017319A7AF48CB8CD" sap:content-version="1">
+                <End Type="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDSCDS_RPRT_BASE_CONH2Type" Multiplicity="1" Role="FromRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD"/>
+                <End Type="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDST_USER_TOOLSType" Multiplicity="*" Role="ToRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD"/>
+            </Association>
+            <EntityContainer Name="ZGDSCDS_RPRT_BASE_CONH2_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZGDSCDS_RPRT_BASE_CONH2" EntityType="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDSCDS_RPRT_BASE_CONH2Type" sap:content-version="1"/>
+                <EntitySet Name="ZGDST_USER_TOOLS" EntityType="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDST_USER_TOOLSType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_2C1FA01D18BC12C017319A7AF48CB8CD" Association="ZGDSCDS_RPRT_BASE_CONH2_CDS.assoc_2C1FA01D18BC12C017319A7AF48CB8CD" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZGDSCDS_RPRT_BASE_CONH2" Role="FromRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD"/>
+                    <End EntitySet="ZGDST_USER_TOOLS" Role="ToRole_assoc_2C1FA01D18BC12C017319A7AF48CB8CD"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDSCDS_RPRT_BASE_CONH2_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="ZGDSCDS_RPRT_BASE_CONH2_CDS.ZGDSCDS_RPRT_BASE_CONH2_CDS_Entities/ZGDSCDS_RPRT_BASE_CONH2" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_user_tools"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://seu-host:porta/sap/opu/odata/sap/ZGDSCDS_RPRT_BASE_CONH2_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://seu-host:porta/sap/opu/odata/sap/ZGDSCDS_RPRT_BASE_CONH2_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
