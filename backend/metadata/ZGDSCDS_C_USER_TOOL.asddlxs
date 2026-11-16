@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: { typeName: 'Ferramenta', typeNamePlural: 'Ferramentas' }
+
+annotate entity ZGDSCDS_C_USER_TOOL
+    with
+
+{
+  @UI.facet: [ { id: 'Ferramentas',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'Ferramentas',
+                 position: 10 } ]
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  Userid;
+
+  @UI.hidden: true
+  Toolsid;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZGDSCDS_FERRAMENTAS_VH', element: 'Toolname' },
+                                        additionalBinding: [ { element: 'Toolsid',
+                                                               localElement: 'Toolsid',
+                                                               usage: #RESULT } ] } ]
+  @UI.identification: [ { position: 20, label: 'Ferramenta' } ]
+  @UI.lineItem: [ { position: 20, label: 'Ferramenta' } ]
+  Toolname;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZGDSCDS_NIVEL_GERAL_VH', element: 'Ddtext' } } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  Knowledge;
+
+  @Consumption.valueHelpDefinition: [ { entity: { name: 'ZGDSCDS_NIVEL_GERAL_VH', element: 'Ddtext' } } ]
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  Interest;
+
+  @UI.identification: [ { position: 50, label: 'Posso dar treinamento' } ]
+  @UI.lineItem: [ { position: 50, label: 'Posso dar treinamento' } ]
+  Training;
+
+  @UI.hidden: true
+  Lastchangedat;
+}
