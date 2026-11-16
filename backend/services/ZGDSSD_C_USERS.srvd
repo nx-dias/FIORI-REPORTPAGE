@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition Users'
+define service ZGDSSD_C_USERS {
+  expose ZGDSCDS_C_USER      as BaseConhecimentoUser;
+  expose ZGDSCDS_C_USER_TOOL as UserFerramentas;
+}
