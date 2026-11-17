@@ -108,17 +108,17 @@ The `ZGDSCDS_RPRT_BASE_CONH2_CDS` binding is referenced by the report frontend a
 
 ### Knowledge base report
 
-![Knowledge base List Report](base-conhecimento-report.png)
+![Knowledge base List Report](assets/base-conhecimento-report.png)
 
 ### Tools registration
 
-![Tools base](base-ferramentas.png)
+![Tools base](assets/base-ferramentas.png)
 
 ### Knowledge by user
 
-![User knowledge base(1)](base-usuarios-1.png)
+![User knowledge base(1)](assets/base-usuarios-1.png)
 
-![User knowledge base(2)](base-usuarios-2.png)
+![User knowledge base(2)](assets/base-usuarios-2.png)
 
 ![User knowledge base(3)](base-usuarios-3.png)
 
