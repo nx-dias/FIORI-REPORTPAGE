@@ -108,17 +108,17 @@ O binding `ZGDSCDS_RPRT_BASE_CONH2_CDS` é referenciado pelo frontend do relató
 
 ### Relatório da base de conhecimento
 
-![List Report da base de conhecimento](base-conhecimento-report.png)
+![List Report da base de conhecimento](assets/base-conhecimento-report.png)
 
 ### Cadastro de ferramentas
 
-![Base de ferramentas](base-ferramentas.png)
+![Base de ferramentas](assets/base-ferramentas.png)
 
 ### Conhecimento por usuário
 
-![Base de conhecimento do usuário(1)](base-usuarios-1.png)
+![Base de conhecimento do usuário(1)](assets/base-usuarios-1.png)
 
-![Base de conhecimento do usuário(2)](base-usuarios-2.png)
+![Base de conhecimento do usuário(2)](assets/base-usuarios-2.png)
 
 ![Base de conhecimento do usuário(3)](base-usuarios-3.png)
 
