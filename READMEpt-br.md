@@ -120,7 +120,7 @@ O binding `ZGDSCDS_RPRT_BASE_CONH2_CDS` é referenciado pelo frontend do relató
 
 ![Base de conhecimento do usuário(2)](assets/base-usuarios-2.png)
 
-![Base de conhecimento do usuário(3)](base-usuarios-3.png)
+![Base de conhecimento do usuário(3)](assets/base-usuarios-3.png)
 
 ## Licença
 
