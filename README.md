@@ -120,7 +120,7 @@ The `ZGDSCDS_RPRT_BASE_CONH2_CDS` binding is referenced by the report frontend a
 
 ![User knowledge base(2)](assets/base-usuarios-2.png)
 
-![User knowledge base(3)](base-usuarios-3.png)
+![User knowledge base(3)](assets/base-usuarios-3.png)
 
 ## License
 
